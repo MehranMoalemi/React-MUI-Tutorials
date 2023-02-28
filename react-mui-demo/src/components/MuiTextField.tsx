@@ -14,10 +14,15 @@ export const MuiTextField = () => {
         <TextField label='Filled' variant='filled' />
         <TextField label='Standard' variant='standard' />
       </Stack>
+
       <Stack spacing={2} direction='row'>
         <TextField label='Small secondary' size='small' color='secondary' />
       </Stack>
+
       <Stack spacing={2} direction='row'>
+        //the TextField is required because of required props
+        //helperText shown at the bottom of the filled in a small font size and here is conditionaly
+        //error will change the color of the field to red
         <TextField
           label='Form Input'
           required
@@ -30,7 +35,11 @@ export const MuiTextField = () => {
           onChange={handleChange}
         />
       </Stack>
+
       <Stack spacing={2} direction='row'>
+        // first: we should import InputAdornment component from mui -> look at the top
+        // this is like a prefix and we pass it to InputProps
+        // position attr will set the position to be at the end of the filed or start
         <TextField
           label='Amount'
           InputProps={{
