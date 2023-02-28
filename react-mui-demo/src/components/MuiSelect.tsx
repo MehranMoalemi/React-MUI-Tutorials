@@ -11,6 +11,10 @@ export const MuiSelect = () => {
   }
   return (
     <Box width='250px'>
+      
+      // select prop will change the behavior from text input to selector
+      //SelectProps={{multiple: true}} with this we can select mutiple option ** look at the type of state too-its string-array
+      
       <TextField
         label='Select country'
         select
