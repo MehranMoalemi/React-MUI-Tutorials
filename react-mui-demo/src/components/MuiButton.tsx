@@ -23,6 +23,8 @@ export const MuiButton = () => {
     setFormats(updatedFormats)
   }
   return (
+
+    // Stack is a container like a div - it have direction propery and spacing
     <Stack spacing={4}>
       <Stack spacing={2} direction='row'>
         <Button variant='text' href='https://google.com'>
@@ -31,6 +33,7 @@ export const MuiButton = () => {
         <Button variant='contained'>Contained</Button>
         <Button variant='outlined'>Outlined</Button>
       </Stack>
+
       <Stack spacing={2} direction='row'>
         <Button variant='contained' color='primary'>
           Primary
@@ -51,6 +54,9 @@ export const MuiButton = () => {
           Success
         </Button>
       </Stack>
+
+      // display flex will affect the size of the button
+
       <Stack display='block' spacing={2} direction='row'>
         <Button variant='contained' size='small'>
           Small
@@ -62,7 +68,10 @@ export const MuiButton = () => {
           Large
         </Button>
       </Stack>
+
+
       <Stack spacing={2} direction='row'>
+        // startIcon for puting the icon at the start of the Button
         <Button
           variant='contained'
           startIcon={<SendIcon />}
@@ -70,14 +79,21 @@ export const MuiButton = () => {
           onClick={() => alert('Clicked')}>
           Send
         </Button>
+        // endIcon for puting the icon at the end of the Button
         <Button variant='contained' endIcon={<SendIcon />} disableElevation>
           Send
         </Button>
+        //IconButton used for Buttons that are only Icon
         <IconButton color='success' size='small' aria-label='send'>
           <SendIcon />
         </IconButton>
       </Stack>
+
+
       <Stack direction='row'>
+        // ButtonGroup for group of buttons beside each other with specific style - sticked together
+        // aria-label is for accessibility ? *search more* 
+        // onCLick should set on each Button separately
         <ButtonGroup
           variant='text'
           orientation='vertical'
@@ -89,7 +105,13 @@ export const MuiButton = () => {
           <Button>Right</Button>
         </ButtonGroup>
       </Stack>
+
+
       <Stack direction='row'>
+        // format is an state
+        // *exclusive* : when we add exclusive it means we want to choose only one option...
+        // it means when we select one the others will be unselected and the result will be an string only
+        // but when we dont use it we can select multiple options or all of them and the result will be an array of strings
         <ToggleButtonGroup
           exclusive
           value={formats}
