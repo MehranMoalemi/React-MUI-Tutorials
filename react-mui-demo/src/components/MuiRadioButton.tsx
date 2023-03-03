@@ -22,6 +22,7 @@ export const MuiRadioButton = () => {
           Years of experience
         </FormLabel>
         <RadioGroup
+          //align radio buttons in a row
           row
           aria-labelledby='job-experience-group-label'
           name='job-experience-group'
