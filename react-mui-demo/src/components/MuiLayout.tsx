@@ -1,9 +1,14 @@
-import { Box, Stack, Grid, Paper } from '@mui/material'
+import { Box, Stack, Grid, Paper, Divider } from '@mui/material'
 
 export const MuiLayout = () => {
   return (
     <Paper sx={{ padding: '32px' }} elevation={2}>
-      <Stack border='1px solid' spacing={2} direction='row'>
+      // stack by default is display flex and direction columnSpacing
+      //spacing 1 = 8px 
+      <Stack border='1px solid' spacing={2} direction='row'
+      //this will add a vertical devider border
+        // divider={<Divider orientation='vertical' flexItem/>}
+      >
         <Box
           component='span'
           sx={{
