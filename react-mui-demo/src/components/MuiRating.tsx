@@ -13,6 +13,7 @@ export const MuiRating = () => {
     setValue(newValue)
   }
   return (
+    //div
     <Stack spacing={2}>
       <Rating
         value={value}
