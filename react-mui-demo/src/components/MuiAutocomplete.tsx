@@ -26,6 +26,7 @@ export const MuiAutocomplete = () => {
           setValue(newValue)
         }}
       />
+      // using object as options 
       <Autocomplete
         options={skillsOptions}
         renderInput={params => <TextField {...params} label='Skills' />}
@@ -33,6 +34,20 @@ export const MuiAutocomplete = () => {
         onChange={(_event: any, newValue: Skill | null) => {
           setSkill(newValue)
         }}
+
+        //this option below will help to type anything we want and accept it to the state
+        // freeSolo
+
+        //other options:
+        // autoComplete
+        // autoCapitalize
+        // autoCorrect
+        // autoHighlight
+        // autoSelect
+        // autoSave
+        
+
+
       />
     </Stack>
   )
