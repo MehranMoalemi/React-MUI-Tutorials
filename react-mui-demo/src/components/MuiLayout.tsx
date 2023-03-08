@@ -7,12 +7,14 @@ export const MuiLayout = () => {
         <Box
           component='span'
           sx={{
+            // primary.main is from theme pallete
             backgroundColor: 'primary.main',
             color: 'white',
             height: '100px',
             width: '100px',
             padding: '16px',
             '&:hover': {
+              // primary.light is from theme pallete
               backgroundColor: 'primary.light'
             }
           }}>
@@ -22,8 +24,12 @@ export const MuiLayout = () => {
           display='flex'
           height='100px'
           width='100px'
+          //shorthand for backgroundColor
           bgcolor='success.light'
-          p={2}></Box>
+          //shorthand for padding - 1 = 8px - 2 = 2*8px in here
+          p={2}
+        >
+          </Box>
       </Stack>
       <Grid rowSpacing={2} columnSpacing={1} container my={4}>
         <Grid item xs={6}>
