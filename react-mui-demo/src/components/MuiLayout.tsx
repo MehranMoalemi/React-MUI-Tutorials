@@ -3,8 +3,8 @@ import { Box, Stack, Grid, Paper, Divider } from '@mui/material'
 export const MuiLayout = () => {
   return (
     <Paper sx={{ padding: '32px' }} elevation={2}>
-      // stack by default is display flex and direction columnSpacing
-      //spacing 1 = 8px 
+      {/* stack by default is display flex and direction columnSpacing */}
+      {/* spacing 1 = 8px  */}
       <Stack border='1px solid' spacing={2} direction='row'
       //this will add a vertical devider border
       // divider={<Divider orientation='vertical' flexItem/>}
@@ -38,7 +38,9 @@ export const MuiLayout = () => {
       </Stack>
 
       <Grid
+        // 2 = 16px
         rowSpacing={2}
+        // 1 = 8px
         columnSpacing={1}
         //this is the parent or container of Grid items
         container
@@ -52,6 +54,7 @@ export const MuiLayout = () => {
           //if we dont specify any number for them then they will become auto layout
           //we can set the value to auto too
           //we can set all of them to make them responsive for any sizes
+          //we  have 12 columns 
           xs={6}
           sm
           md
