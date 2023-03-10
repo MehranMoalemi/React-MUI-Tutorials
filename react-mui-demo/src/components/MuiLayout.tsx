@@ -2,6 +2,8 @@ import { Box, Stack, Grid, Paper, Divider } from '@mui/material'
 
 export const MuiLayout = () => {
   return (
+    //paper has a whte background and rounded corners and used for create cards
+    //elevation prop is for the level of the shadow and its value by default is 1
     <Paper sx={{ padding: '32px' }} elevation={2}>
       {/* stack by default is display flex and direction columnSpacing */}
       {/* spacing 1 = 8px  */}
