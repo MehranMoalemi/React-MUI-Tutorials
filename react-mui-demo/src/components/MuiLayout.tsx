@@ -7,7 +7,7 @@ export const MuiLayout = () => {
       //spacing 1 = 8px 
       <Stack border='1px solid' spacing={2} direction='row'
       //this will add a vertical devider border
-        // divider={<Divider orientation='vertical' flexItem/>}
+      // divider={<Divider orientation='vertical' flexItem/>}
       >
         <Box
           component='span'
@@ -34,25 +34,54 @@ export const MuiLayout = () => {
           //shorthand for padding - 1 = 8px - 2 = 2*8px in here
           p={2}
         >
-          </Box>
+        </Box>
       </Stack>
-      <Grid rowSpacing={2} columnSpacing={1} container my={4}>
-        <Grid item xs={6}>
+
+      <Grid
+        rowSpacing={2}
+        columnSpacing={1}
+        //this is the parent or container of Grid items
+        container
+        //margin vertical
+        my={4}
+      >
+        <Grid
+          // this prop will specify the type of the Grid component to be grid item
+          item
+          //these sized used for responsive
+          //if we dont specify any number for them then they will become auto layout
+          //we can set the value to auto too
+          //we can set all of them to make them responsive for any sizes
+          xs={6}
+          sm
+          md
+          lg
+          xl
+        >
           <Box p={2} bgcolor='primary.light'>
             Item 1
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={6}
+        >
           <Box p={2} bgcolor='primary.light'>
             Item 2
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={6}
+        >
           <Box p={2} bgcolor='primary.light'>
             Item 3
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={6}
+        >
           <Box p={2} bgcolor='primary.light'>
             Item 4
           </Box>
