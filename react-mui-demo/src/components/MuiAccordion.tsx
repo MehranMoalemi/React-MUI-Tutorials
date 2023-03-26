@@ -9,14 +9,19 @@ import { useState } from 'react'
 
 export const MuiAccordion = () => {
   const [expanded, setExpanded] = useState<string | false>(false)
+
+  // this function will help us to only on accordion expand at the time
   const handleChange = (isExpanded: boolean, panel: string) => {
     setExpanded(isExpanded ? panel : false)
   }
   return (
     <>
+      {/*Accordion ==> wrapper component */}
       <Accordion
+        //for expanding only on accordion at the time
         expanded={expanded === 'panel1'}
         onChange={(event, isExpanded) => handleChange(isExpanded, 'panel1')}>
+        
         <AccordionSummary
           aria-controls='panel1-content'
           id='panel1-header'
