@@ -1,7 +1,8 @@
-import { Stack, ImageList, ImageListItem, Box } from '@mui/material'
+import { Stack, ImageList, ImageListItem, Box,ImageListItemBar } from '@mui/material'
 export const MuiImageList = () => {
   return (
     <Stack spacing={4}>
+      {/* with this component images will be downloaded on scrolling */}
       <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
         {itemData.map(item => (
           <ImageListItem key={item.img}>
@@ -13,6 +14,7 @@ export const MuiImageList = () => {
           </ImageListItem>
         ))}
       </ImageList>
+      
       <ImageList
         sx={{ width: 500, height: 450 }}
         variant='woven'
@@ -28,14 +30,27 @@ export const MuiImageList = () => {
           </ImageListItem>
         ))}
       </ImageList>
+
       <Box sx={{ width: 500, height: 450, overflowY: 'scroll' }}>
-        <ImageList variant='masonry' cols={3} gap={8}>
+        <ImageList
+          //with this variant every image has its own hight as its needed
+          variant='masonry' cols={3} gap={8}
+        >
           {itemData3.map(item => (
             <ImageListItem key={item.img}>
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format&dpr=2`}
                 alt={item.title}
                 loading='lazy'
+              />
+              {/* this will add an title bar with a backbg to the image */}
+              <ImageListItemBar
+                title={item.title}
+                // position
+                // subtitle
+
+                // this is a click able button
+                // actionIcon
               />
             </ImageListItem>
           ))}
