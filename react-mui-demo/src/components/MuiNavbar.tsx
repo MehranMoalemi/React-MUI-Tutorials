@@ -24,6 +24,7 @@ export const MuiNavbar = () => {
   return (
     <AppBar position='static' color='transparent'>
       <Toolbar>
+        {/* the logo  */}
         <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
           <CatchingPokemonIcon />
         </IconButton>
