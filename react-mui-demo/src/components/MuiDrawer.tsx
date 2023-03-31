@@ -16,6 +16,7 @@ export const MuiDrawer = () => {
         <MenuIcon />
       </IconButton>
       <Drawer
+        // specifying from which direction the sidebar opens
         anchor='left'
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}>
