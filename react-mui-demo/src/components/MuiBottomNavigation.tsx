@@ -9,6 +9,7 @@ export const MuiBottomNavigation = () => {
   return (
     <BottomNavigation
       sx={{ width: '100%', position: 'absolute', bottom: 0 }}
+      //showing the name of the BottomNavigationAction {labels} all the time not only when they are active
       showLabels
       value={value}
       onChange={(event, newValue) => {
