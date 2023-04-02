@@ -7,10 +7,15 @@ export const MuiAvatar = () => {
         <Avatar sx={{ bgcolor: 'success.light' }}>CK</Avatar>
       </Stack>
       <Stack direction='row' spacing={1}>
-        <AvatarGroup max={3}>
+        {/* grouping bunch of avatars together */}
+        <AvatarGroup
+          //maximum number of avatars tha t we want to show in AvatarGroup
+          max={3}
+        >
           <Avatar sx={{ bgcolor: 'primary.light' }}>BW</Avatar>
           <Avatar sx={{ bgcolor: 'success.light' }}>CK</Avatar>
           <Avatar
+            //avatar with image
             src='https://randomuser.me/api/portraits/women/79.jpg'
             alt='Jane Doe'
           />
@@ -20,13 +25,16 @@ export const MuiAvatar = () => {
           />
         </AvatarGroup>
       </Stack>
+
       <Stack direction='row' spacing={1}>
         <Avatar
-          variant='rounded'
+          //square shaped avatar
+          variant='square'
           sx={{ bgcolor: 'primary.light', width: 48, height: 48 }}>
           BW
         </Avatar>
         <Avatar
+          //square rounded shaped avatar 
           variant='rounded'
           sx={{ bgcolor: 'success.light', width: 48, height: 48 }}>
           CK
